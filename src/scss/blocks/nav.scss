@@ -1,0 +1,86 @@
+.nav {
+    background-color: $blueLight;
+    @include md {
+        display: none;
+    }
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        @include lg {
+            height: 40px;
+        }
+    }
+    &-menu {
+        display: flex;
+        column-gap: 31px;
+        @include xxl {
+            column-gap: 20px;
+        }
+        @include xl {
+            column-gap: 18px;
+        }
+        &__link {
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            color: $black;
+            text-decoration-line: none;
+            @include xl {
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+        &__arrow {
+            width: 9px;
+            height: 6px;
+            margin-left: 5px;
+        }
+    }
+    &-contacts {
+        display: flex;
+        column-gap: 34px;
+        @include xxl {
+            column-gap: 30px;
+        }
+        @include xl {
+            column-gap: 20px;
+        }
+        @include lg {
+            column-gap: 12px;
+        }
+        &__tel {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            color: $black;
+            text-decoration-line: none;
+            @include xl {
+                font-size: 12px;
+                line-height: 16px;
+            }
+            @include lg {
+                font-size: 10px;
+                line-height: 14px;
+            }
+        }
+        &__email {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: $blue;
+            text-decoration-line: none;
+            @include xl {
+                font-size: 12px;
+                line-height: 16px;
+            }
+            @include lg {
+                font-size: 10px;
+                line-height: 14px;
+            }
+        }
+    }
+}

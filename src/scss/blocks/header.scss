@@ -1,0 +1,340 @@
+.header {
+    padding: 28px 0;
+    display: flex;
+    align-items: center;
+    @include xl {
+        padding: 20px 0;
+    }
+    @include md {
+        display: none;
+    }
+    &--mobile {
+        display: none;
+        @include md {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 19px 0 17px 0;
+        }
+        @include sm {
+            padding-bottom: 75px;
+            position: relative;
+        }
+    }
+    &-left {
+        display: flex;
+        column-gap: 10px;
+        @include sm {
+            column-gap: 0;
+        }
+    }
+    &-bottom {
+        display: flex;
+        column-gap: 10px;
+        @include sm {
+            position: absolute;
+            width: 100%;
+            justify-content: space-between;
+            bottom: 17px;
+            column-gap: 0;
+        }
+    }
+    &-contacts {
+        display: flex;
+        flex-direction: column;
+        row-gap: 7px;
+        &__tel {
+            text-decoration-line: none;
+            display: flex;
+            align-items: center;
+        }
+        &__img {
+            width: 12px;
+            height: 12px;
+        }
+        &__text {
+            margin-left: 5px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: $black;
+        }
+    }
+    &-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 51px;
+        height: 48px;
+        border: 1px solid $blueBorder;
+        border-radius: 5px;
+        &__img {
+            width: 15px;
+            height: 12px;
+        }
+    }
+    &-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 181px;
+        height: 65px;
+        background-color: $blue;
+        border-radius: 7px;
+        @include xl {
+            width: 146px;
+            height: 53px;
+        }
+        @include md {
+            width: 131px;
+            height: 48px;
+            border-radius: 5px;
+        }
+        &__img {
+            width: 152.7px;
+            height: 53.83px;
+            @include xl {
+                width: 123.17px;
+                height: 43.89px;
+            }
+            @include md {
+                width: 112.38px;
+                height: 39.75px;
+            }
+        }
+    }
+    &-catalog {
+        display: flex;
+        align-items: center;
+        width: 181px;
+        height: 65px;
+        margin-left: 30px;
+        background-color: $orange;
+        border-radius: 7px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        @include xxl {
+            margin-left: 20px;
+        }
+        @include xl {
+            width: 148px;
+            height: 53px;
+        }
+        @include md {
+            width: 61px;
+            height: 48px;
+            margin-left: 0;
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__link {
+            text-decoration-line: none;
+        }
+        &__img {
+            width: 18px;
+            height: 20px;
+            margin-left: 29px;
+            @include xl {
+                width: 15px;
+                height: 14px;
+                margin-left: 24px;
+            }
+            @include md {
+                margin-left: 0;
+            }
+        }
+        &__text {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 21px;
+            color: $white;
+            margin-left: 23px;
+            @include xl {
+                font-size: 13px;
+                line-height: 17px;
+                margin-left: 18px;
+            }
+            @include md {
+                font-size: 10px;
+                line-height: 13px;
+                margin-left: 0;
+                margin-top: 3px;
+            }
+        }
+    }
+    &-search {
+        position: relative;
+        @include md {
+            width: 60px;
+            height: 48px;
+            border: 1px solid $greyLight;
+            border-radius: 5px;
+        }
+        &__img {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 14px;
+            height: 14px;
+            @include md {
+                right: 50%;
+                transform: translateX(50%) translateY(-50%);
+            }
+        }
+    }
+    &__input {
+        width: 620px;
+        height: 66px;
+        padding: 22px 35px 22px 15px;
+        border: none;
+        border-bottom: 1px solid $greyLight;
+        outline: none;
+        margin-left: 30px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+        color: $black;
+        &::-webkit-search-decoration, &::-webkit-search-cancel-button,
+        &::-webkit-search-results-button, &::-webkit-search-results-decoration {
+            display: none;
+        }
+        &::-ms-clear, &::-ms-reveal {
+            display: none;
+            width : 0;
+            height: 0;
+        }
+        &::placeholder {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 22px;
+            color: $greyDark;
+        }
+        @include xxxl {
+            width: 500px;
+        }
+        @include xxl {
+            margin-left: 20px;
+        }
+        @include xl {
+            width: 408px;
+            height: 53px;
+            padding: 15px 35px 15px 15px;
+        }
+        @include lg {
+            width: 259px;
+        }
+    }
+    &-counters {
+        display: flex;
+        column-gap: 16px;
+        height: 30px;
+        margin-left: 181px;
+        @include xxxl {
+            margin-left: 141px;
+        }
+        @include xxl {
+            margin-left: 50px;
+        }
+        @include xl {
+            margin-left: 40px;
+        }
+        @include lg {
+            margin-left: 35px;
+            column-gap: 8px;
+        }
+        &__line {
+            width: 1px;
+            background-color: $blue;
+            opacity: 0.5;
+        }
+        &__item {
+            display: flex;
+            align-items: center;
+            padding: 0px 3px;
+            text-decoration-line: none;
+            @include md {
+                width: 60px;
+                height: 48px;
+                justify-content: center;
+                padding: 0;
+                border: 1px solid $greyLight;
+                border-radius: 5px;
+            }
+        }
+        &__img {
+            height: 16px;
+        }
+        &__number {
+            margin-left: 4px;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 22px;
+            color: $blue;
+            @include md {
+                font-weight: 400;
+                line-height: 19px;
+            }
+        }
+    }
+    &-shopping-cart {
+        display: block;
+        width: 242px;
+        height: 65px;
+        margin-left: 29px;
+        padding: 20.5px 23px;
+        border: 1px solid $blueBorder;
+        border-radius: 5px;
+        text-decoration-line: none;
+        @include xxl {
+            margin-left: 20px;
+        }
+        @include xl {
+            width: 232px;
+            height: 53px;
+            padding: 14.5px 18px;
+        }
+        @include lg {
+            margin-left: 33px;
+        }
+        @include md {
+            width: 62px;
+            height: 48px;
+            margin-left: 0;
+            padding: 14.5px 9px;
+            border-color: $blueLight;
+        }
+        &-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 4px;
+            height: 22px;
+            @include md {
+                height: 17px;
+            }
+            &__img {
+                width: 18px;
+                height: 16px;
+            }
+            &__text {
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 20px;
+                color: $grey;
+            }
+            &__number {
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 22px;
+                color: $black;
+                @include md {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+// Медиа-запросы
+@mixin xxxl {
+    @media (max-width: 1679px) { @content; }
+}
+
+@mixin xxl {
+    @media (max-width: 1535px) { @content; }
+}
+
+@mixin xl {
+    @media (max-width: 1399px) { @content; }
+}
+
+@mixin lg {
+    @media (max-width: 1279px) { @content; }
+}
+
+@mixin md {
+    @media (max-width: 1023px) { @content; }
+}
+
+@mixin sm {
+    @media (max-width: 767px) { @content; }
+}
+
+@mixin xs {
+    @media (max-width: 575px) { @content; }
+}
+
+@mixin xxs {
+    @media (max-width: 374px) { @content; }
+}

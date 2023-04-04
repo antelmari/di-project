@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+// Библиотеки
+@import "../../node_modules/magnific-popup/dist/magnific-popup";
+
+// Технические блоки
+@import "base/mixins.scss";
+@import "base/consts.scss";
+
+// Блоки
+@import "blocks/wrapper.scss";
+@import "blocks/nav.scss";
+@import "blocks/header.scss";
+@import "blocks/main.scss";
+@import "blocks/popup.scss";

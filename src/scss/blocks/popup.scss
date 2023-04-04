@@ -1,0 +1,239 @@
+.popup {
+    &-close {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 51px;
+        height: 48px;
+        border-radius: 5px;
+        background-color: $white;
+        cursor: pointer;
+        &__img {
+            width: 13px;
+            height: 13px;
+        }
+        &--menu {
+            top: 19px;
+            right: -61px;
+        }
+        &--search {
+            margin-top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &--catalog {
+            position: relative;
+            width: 61px;
+            background-color: $orange;
+            flex-direction: column;
+            margin-bottom: 10px;
+            &__img {
+                width: 15px;
+                height: 14px;
+            }
+            &__text {
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 13px;
+                margin-top: 3px;
+                color: $white;
+            }
+        }
+    }
+    &-catalog {
+        height: 100vh;
+        position: relative;
+        display: none;
+        @include md {
+            display: block;
+        }
+        &-wrapper {
+            @include md {
+                padding-top: 19px;
+                padding-left: 141px;
+            }
+            @include sm {
+                padding-top: 77px;
+                padding-left: 0;
+            }
+            @include xs {
+                padding-left: 16px;
+            }
+            @include xxs {
+                padding-left: 9px;
+            }
+        }
+        &-items {
+            background-color: $white;
+            border-radius: 5px;
+            width: 100%;
+            padding: 7px 34px 6px 29px;
+        }
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration-line: none;
+            padding: 15px 0 14px 0;
+            border-bottom: 1px solid $greyBorder;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        &__text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: $black;
+        }
+        &__arrow {
+            width: 9px;
+            height: 14px;
+        }
+    }
+    &-search {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        &-container {
+            margin-top: 119px;
+            position: relative;
+            width: calc(100% - 32px);
+            height: 48px;
+        }
+        &__img {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 24px;
+        }
+        &__input {
+            width: 100%;
+            height: 100%;
+            background-color: $white;
+            border: 1px solid $greyLight;
+            border-radius: 5px;
+            padding: 0 40px 0 24px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: $black;
+            outline: none;
+            &::-webkit-search-decoration, &::-webkit-search-cancel-button,
+            &::-webkit-search-results-button, &::-webkit-search-results-decoration {
+                display: none;
+            }
+            &::-ms-clear, &::-ms-reveal {
+                display: none;
+                width : 0;
+                height: 0;
+            }
+            &::placeholder {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                color: $greyDark;
+            }
+        }
+    }
+    &-menu {
+        position: relative;
+        width: calc(100% - 77px);
+        height: 770px;
+        background-color: $white;
+        padding: 9px 29px 45px 16px;
+        &-nav {
+            display: flex;
+            flex-direction: column;
+            &__link {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px 0 14px 0;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                color: $black;
+                text-decoration-line: none;
+                border-bottom: 1px solid $greyBorder;
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+            &__arrow {
+                width: 9px;
+                height: 14px;
+            }
+        }
+        &-contacts {
+            margin-top: 65px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            &__tel {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 22px;
+                color: $black;
+                text-decoration-line: none;
+            }
+            &__email {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                color: $blue;
+            }
+        }
+        &-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 141px;
+            margin-left: 2px;
+            width: 238px;
+            height: 41px;
+            border: 1px solid $blue;
+            background-color: $white;
+            border-radius: 5px;
+            outline: none;
+            cursor: pointer;
+            &__img {
+                width: 14px;
+                height: 14px;
+            }
+            &__text {
+                margin-left: 29px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: $blue;
+            }
+        }
+    }
+}
+
+.mfp-container {
+    padding: 0;
+}
+
+.my-mfp-zoom-in .zoom-anim-dialog {
+	opacity: 0;
+	transition: all 0.2s ease-in-out;
+	transform: scale(0.8);
+}
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+	opacity: 1;
+	transform: scale(1);
+}
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+	transform: scale(0.8);
+	opacity: 0;
+}

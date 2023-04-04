@@ -1,0 +1,384 @@
+.main {
+    padding-bottom: 91px;
+    @include xl {
+        padding-bottom: 66px;
+    }
+    @include xs {
+        padding-bottom: 53px;
+    }
+    &-info {
+        display: flex;
+        justify-content: space-between;
+        @include md {
+            flex-direction: column;
+            row-gap: 20px;
+        }
+        @include xs {
+            row-gap: 0;
+        }
+        &-promo {
+            width: 1193px;
+            height: 400px;
+            background: url(../img/images/main.jpg) center (center / cover) no-repeat;
+            border-radius: 10px;
+            padding-top: 67px;
+            padding-left: 37px;
+            @include xxxl {
+                width: 1075px;
+                height: 360px;
+                padding-top: 40px;
+            }
+            @include xxl {
+                width: 985px;
+            }
+            @include xl {
+                width: 850px;
+                height: 300px;
+                padding-top: 35px;
+            }
+            @include lg {
+                width: 732px;
+            }
+            @include md {
+                width: 720px;
+            }
+            @include sm {
+                width: 540px;
+                height: 250px;
+                padding-top: 20px;
+            }
+            @include xs {
+                position: relative;
+                padding: 0;
+                width: 100%;
+                height: 174px;
+            }
+            &__title {
+                font-weight: 600;
+                font-size: 40px;
+                line-height: 52px;
+                color: $white;
+                @include xl {
+                    font-size: 32px;
+                    line-height: 42px;
+                }
+                @include sm {
+                    font-weight: 500;
+                    font-size: 30px;
+                    line-height: 36px;
+                }
+                @include xs {
+                    position: absolute;
+                    bottom: -33px;
+                    width: 100%;
+                    transform: translateY(100%);
+                    color: $black;
+                    text-align: center;
+                }
+            }
+            &__subtitle {
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 34px;
+                color: $white;
+                margin-top: 37px;
+                @include xxxl {
+                    margin-top: 28px;
+                }
+                @include xl {
+                    font-size: 18px;
+                    line-height: 25px;
+                }
+                @include sm {
+                    margin-top: 20px;
+                }
+                @include xs {
+                    margin-top: 0;
+                    position: absolute;
+                    bottom: -138px;
+                    width: 100%;
+                    transform: translateY(100%);
+                    color: $black;
+                    text-align: center;
+                }
+            }
+            &__btn {
+                margin-top: 46px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 140px;
+                height: 45px;
+                border: 1px solid $greyLight;
+                border-radius: 5px;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 21px;
+                color: $white;
+                text-decoration-line: none;
+                @include xxxl {
+                    margin-top: 28px;
+                }
+                @include sm {
+                    margin-top: 20px;
+                }
+                @include xs {
+                    margin-top: 0;
+                    position: absolute;
+                    bottom: -212px;
+                    left: 50%;
+                    transform: translateY(100%) translateX(-50%);
+                    border-color: $blue;
+                    color: $blue;
+                }
+            }
+        }
+        &-blocks {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include md {
+                flex-direction: row;
+            }
+            @include xs {
+                margin-top: 300px;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 20px;
+            }
+            &__link {
+                text-decoration-line: none;
+            }
+            &-news {
+                width: 378px;
+                height: 185px;
+                background: url(../img/images/news.jpg) center (center / cover) no-repeat;
+                border-radius: 10px;
+                padding: 46px 189px 0 35px;
+                @include xxxl {
+                    width: 345px;
+                    height: 170px;
+                    padding: 30px 189px 0 30px;
+                }
+                @include xxl {
+                    width: 315px;
+                    padding: 30px 164px 0 25px;
+                }
+                @include xl {
+                    width: 270px;
+                    height: 140px;
+                    padding: 30px 101px 30px 15px;
+                }
+                @include lg {
+                    width: 231px;
+                    padding: 30px 62px 30px 15px;
+                    background-position: left;
+                }
+                @include md {
+                    width: 345px;
+                    height: 170px;
+                    padding: 30px 189px 0 30px;
+                    background-position: center;
+                }
+                @include sm {
+                    width: 260px;
+                    height: 140px;
+                    padding: 30px 91px 30px 15px;
+                    background-position: left;
+                }
+                @include xs {
+                    width: 343px;
+                    height: 146px;
+                    padding: 35px 172px 33px 17px;
+                    background-position: center;
+                }
+                @include xxs {
+                    width: 100%;
+                    padding-right: 140px;
+                }
+            }
+            &-sale {
+                width: 378px;
+                height: 185px;
+                background: url(../img/images/sale.jpg) center (center / cover) no-repeat;
+                border-radius: 10px;
+                padding: 37px 42px 0 220px;
+                @include xxxl {
+                    width: 345px;
+                    height: 170px;
+                    padding: 25px 40px 0 189px;
+                }
+                @include xxl {
+                    width: 315px;
+                    padding: 25px 30px 0 169px;
+                }
+                @include xl {
+                    width: 270px;
+                    height: 140px;
+                    padding: 15px 20px 22px 139px;
+                }
+                @include lg {
+                    width: 231px;
+                    padding: 15px 20px 22px 100px;
+                }
+                @include md {
+                    width: 345px;
+                    height: 170px;
+                    padding: 25px 40px 0 189px;
+                }
+                @include sm {
+                    width: 260px;
+                    height: 140px;
+                    padding: 15px 20px 22px 129px;
+                }
+                @include xs {
+                    width: 343px;
+                    height: 146px;
+                    padding: 16px 47px 13px 178px;
+                }
+                @include xxs {
+                    width: 100%;
+                    padding-right: 20px;
+                }
+            }
+            &__title {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 26px;
+                color: $black;
+                @include xs {
+                    font-size: 16px;
+                    line-height: 21px;
+                }
+            }
+            &__subtitle {
+                margin-top: 28px;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 22px;
+                color: $black;
+                @include xl {
+                    margin-top: 10px;
+                }
+                @include md {
+                    margin-top: 20px;
+                }
+                @include sm {
+                    margin-top: 10px;
+                }
+                @include xs {
+                    margin-top: 13px;
+                }
+            }
+        }
+    }
+    &-products {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 30px;
+        @include xxxl {
+            row-gap: 20px;
+        }
+        @include xl {
+            margin-top: 20px;
+        }
+        @include xs {
+            justify-content: center;
+        }
+        &__item {
+            width: 378px;
+            height: 140px;
+            border: 1px solid $greyLight;
+            border-radius: 10px;
+            padding-top: 52px;
+            padding-left: 46px;
+            @include xxxl {
+                width: 345px;
+                height: 128px;
+                padding-top: 42px;
+                padding-left: 36px;
+            }
+            @include xxl {
+                width: 315px;
+                padding-left: 30px;
+            }
+            @include xl {
+                width: 270px;
+                height: 110px;
+                padding-top: 0;
+                padding-left: 19px;
+                display: flex;
+                align-items: center;
+            }
+            @include lg {
+                width: 231px;
+                background-position: left !important;
+                padding-right: 69px;
+            }
+            @include md {
+                width: 345px;
+                height: 128px;
+                padding: 42px 0 0 36px;
+                align-items: flex-start;
+                background-position: center !important;
+            }
+            @include sm {
+                width: 260px;
+                height: 110px;
+                padding-top: 0;
+                padding-left: 19px;
+                align-items: center;
+                background-position: left !important;
+            }
+            @include xs {
+                width: 341px;
+                height: 140px;
+                padding: 52px 0 0 32px;
+                align-items: flex-start;
+                background-position: center !important;
+            }
+            @include xxs {
+                width: 100%;
+                padding-left: 25px;
+            }
+            &--1 {
+                background: url(../img/images/product-1.jpg) center (center / cover) no-repeat;
+            }
+            &--2 {
+                background: url(../img/images/product-2.jpg) center (center / cover) no-repeat;
+            }
+            &--3 {
+                background: url(../img/images/product-3.jpg) center (center / cover) no-repeat;
+            }
+            &--4 {
+                background: url(../img/images/product-4.jpg) center (center / cover) no-repeat;
+            }
+            &--5 {
+                background: url(../img/images/product-5.jpg) center (center / cover) no-repeat;
+            }
+            &--6 {
+                background: url(../img/images/product-6.jpg) center (center / cover) no-repeat;
+            }
+            &--7 {
+                background: url(../img/images/product-7.jpg) center (center / cover) no-repeat;
+            }
+            &--8 {
+                background: url(../img/images/product-8.jpg) center (center / cover) no-repeat;
+            }
+        }
+        &__title {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 21px;
+            color: $black;
+            @include xl {
+                font-size: 14px;
+            }
+            @include lg {
+                font-size: 16px;
+            }
+        }
+    }
+}
